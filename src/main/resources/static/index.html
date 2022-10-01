@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>성신여자대학교 청원하기</title>
+  <meta http-equiv="Content-Type" content="text/html"; charset="UTF-8">
+  <style>
+		* {
+			margin: 0;
+			padding: 0;
+			border: 0;
+		}
+
+		body {
+			background-color: rgb(243,243,243);
+			width:1200px;
+			margin:0 auto;
+		}
+
+		header {
+			padding:20px 20px 20px 20px;
+			border-radius: 10px;
+			background-color: #1452a3;
+			color:white;
+			margin-bottom: 20px;
+		}
+		header a {color:white;}
+
+		section {
+			overflow: hidden;/*정렬용, ㄱㄷㄴㄴ*/
+			margin: 20 0px;
+			position:inherit;
+		}
+
+		article {
+			border: 15px;
+			border-radius: 15px;
+			border-style:solid;
+			padding: 20px;
+			background-color: white;
+			/*위까지 섹션에 있는 요소의 공통*/
+			float: left;/*왼쪽 붙이기 정렬?*/
+			width: 640px;
+			background-image : url('BackgroundFront.png');
+			background-size: 40%;
+			background-repeat: no-repeat;
+			background-position: 250px 15px;
+		}
+
+		aside {
+			border: 15px;
+			border-radius: 15px;
+			border-style:solid;
+			padding: 20px;
+			background-color: white;
+			float: right; top:20px;
+			display : block;
+			width: 220px;
+            height: 310px;
+			position: relative;
+		}
+
+		#topPlus {
+			display: block;
+			position:relative;
+			top : 0px; float: right;
+		}
+
+		footer {
+			color:gray;
+			margin-top: 20px;
+			padding: 10px;
+			background-color: rgba(200, 188, 171, 0.207);
+		}
+
+		header, article, aside, footer {
+			border-width: 1px;
+			border-style:solid;
+			border-color: #999999 ;
+		}
+
+		.product_info {
+			background-color: rgba(200, 188, 171, 0.207);
+		}
+		a {text-decoration-line: none;}
+		a:hover {color:gray;}
+
+		#nav > li {
+			display:inline;
+			margin-left: 20px;
+			line-height: 40px;
+            position: relative;
+		}
+		#nav {
+			background: #45484d;
+			background: -moz-linear-gradient(left,  #45484d 0%, #000000 100%);
+			background: -webkit-linear-gradient(left,  #45484d 0%,#000000 100%);
+			background: linear-gradient(to right,  #45484d 0%,#000000 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=1 );
+		}
+        .search_bar{
+            width:500px;
+            font-size:20px;
+        }
+
+        #customer > li {
+			display:inline;
+            margin-right: 20px;
+			float:right;
+            font-size:1px;
+		}
+
+        .c_bar {
+            position: absolute;
+            display: none;
+            left:-20px; top:30px;
+            border: 2px solid gray;
+            width:100px; height:500px;
+			background-color: rgba(0, 0, 0, 0.601);
+			margin: 0 0px; padding: 0px;
+			box-shadow: 5px 5px 3px gray, -5px -5px 3px gray;
+
+        }
+
+        .c_bar li {
+            border:2px solid white;
+            color: black;
+        }
+
+        #nav li:hover .c_bar {
+            display: block;
+        }
+
+
+	</style>
+</head>
+
+<body>
+
+<header>
+  <ul id="customer">
+    <li><a href="#">회원가입</a></li>
+    <li><a href="#">로그인</a></li>
+  </ul>
+  <h1>성신여대 청원</h1>
+  <p>수정이들의 많은 참여....</p>
+  <br>
+  <ul id="nav">
+    <li><a href="#" class="categ" >≡</a>
+      <ul class="c_bar">
+        <li>시설</li>
+        <li>서비스</li>
+        <li>장학</li>
+        <li>행정</li>
+        <li>수강</li>
+        <li>등등</li>
+      </ul>
+    </li>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="#">전체 청원</a></li>
+    <li><a href="#">핫이슈</a></li>
+    <li><a href="#">종료 청원</a></li>
+    <li><a href="#">글쓰기</a></li>
+    <li><a href="#">마이페이지</a></li>
+  </ul>
+  <div>
+    <p><input class="search_bar" type="text">
+      <input type="submit" value="검색"></p>
+  </div>
+</header>
+
+<section>
+  <h2>최신 글 모아보기</h2>
+  <article>
+    <h3><a href="#">DB에서 글 불러와야함</a></h3>
+    <p >글 내용도 불러와야혀~~</p>
+    <p class="product_info">동의하기</p>
+    <br>
+    <h3><a href="#">그다음 내용이여~</a></h3>
+    <p >내용이여~~</p>
+    <p class="product_info">동의하기</p>
+    <br>
+    <h3><a href="#">그다음 내용이여~</a></h3>
+    <p >내용이여~~</p>
+    <p class="product_info">동의하기</p>
+    <br>
+    <h3><a href="#">그다음 내용이여~</a></h3>
+    <p >내용이여~~</p>
+    <p class="product_info">동의하기</p>
+
+  </article>
+
+  <a id="topPlus">더보기+ </a>
+  <aside>
+    <h3>TOP 10</h3>
+    <br>
+    <a>top1 - 불러온 1위</a><br>
+    <a>top2 - 불러온 2위</a><br>
+    <a>top3 - 불러온 3위</a><br>
+    <a>top4 - 불러온 4위</a><br>
+    <a>top5 - 불러온 5위</a><br>
+    <a>top6 - 불러온 6위</a><br>
+    <a>top7 - 불러온 7위</a><br>
+    <a>top8 - 불러온 8위</a><br>
+    <a>top9 - 불러온 9위</a><br>
+    <a>top10 - 불러온 10위</a>
+  </aside>
+
+</section>
+
+<footer>
+  <p>
+    &copy; 2022 Sungshin Women's University. Webo0 | 02-920-0000
+  </p>
+</footer>
+<a href="/hello">hello로 가기</a>
+<a href="/hello-mvc">hello-temp로(콘트롤러에서 mvc로 매핑) 가기</a>
+</body>
+
+</html>
