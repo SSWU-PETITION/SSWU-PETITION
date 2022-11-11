@@ -1,0 +1,14 @@
+/* 네이밍 과정 gif 파일 */
+.naming {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.img-naming {
+    display: inline-block;
+    width: 500px;
+    height: 168px;
+    
+    background-image : url('naming-webo0.gif');
+    background-size: 100%;
+}
