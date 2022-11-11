@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    background-color: rgb(243,243,243);
+    width:1200px;
+    margin:0 auto;
+}
+
+header {
+    padding:20px 20px 20px 20px;
+    border-radius: 10px;
+    background-color: #1452a3;
+    color:white;
+    margin-bottom: 20px;
+}
+header a {color:white;}
+
+section {
+    overflow: hidden;/*정렬용, ㄱㄷㄴㄴ*/
+    margin: 20 0px;
+    position:inherit;
+}
+
+article {
+    border: 15px;
+    border-radius: 15px;
+    border-style:solid;
+    padding: 20px;
+    background-color: white;
+    /*위까지 섹션에 있는 요소의 공통*/
+    float: left;/*왼쪽 붙이기 정렬?*/
+    width: 640px;
+    background-image : url('BackgroundFront.png');
+    background-size: 40%;
+    background-repeat: no-repeat;
+    background-position: 250px 15px;
+}
+
+aside {
+    border: 15px;
+    border-radius: 15px;
+    border-style:solid;
+    padding: 20px;
+    background-color: white;
+    float: right; top:20px;
+    display : block;
+    width: 220px;
+    height: 310px;
+    position: relative;
+}
+
+#topPlus {
+    display: block;
+    position:relative;
+    top : 0px; float: right;
+}
+
+footer {
+    color:gray;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: rgba(200, 188, 171, 0.207);
+}
+
+header, article, aside, footer {
+    border-width: 1px;
+    border-style:solid;
+    border-color: #999999 ;
+}
+
+.product_info {
+    background-color: rgba(200, 188, 171, 0.207);
+}
+a {text-decoration-line: none;}
+a:hover {color:gray;}
+
+#nav > li {
+    display:inline;
+    margin-left: 20px;
+    line-height: 40px;
+    position: relative;
+}
+#nav {
+    background: #45484d;
+    background: -moz-linear-gradient(left,  #45484d 0%, #000000 100%);
+    background: -webkit-linear-gradient(left,  #45484d 0%,#000000 100%);
+    background: linear-gradient(to right,  #45484d 0%,#000000 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=1 );
+}
+.search_bar{
+    width:500px;
+    font-size:20px;
+}
+
+#customer > li {
+    display:inline;
+    margin-right: 20px;
+    float:right;
+    font-size:1px;
+}
+
+.c_bar {
+    position: absolute;
+    display: none;
+    left:-20px; top:30px;
+    border: 2px solid gray;
+    width:100px; height:500px;
+    background-color: rgba(0, 0, 0, 0.601);
+    margin: 0 0px; padding: 0px;
+    box-shadow: 5px 5px 3px gray, -5px -5px 3px gray;
+
+}
+
+.c_bar li {
+    border:2px solid white;
+    color: black;
+}
+
+#nav li:hover .c_bar {
+    display: block;
+}

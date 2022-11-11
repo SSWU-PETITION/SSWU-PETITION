@@ -1,0 +1,36 @@
+.info-img-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.logo-symbol, .logo-all {
+    width: fit-content;
+    height: fit-content;
+    margin: 20px 50px 0;
+}
+
+.yungbogong2 {          /* 融保工(융보공) 로고 (심볼 타입) */
+    width: 200px;
+    height: 200px;
+    margin-bottom: 10px;
+    
+    background-image : url('yungbogong-logo_symbol.png');
+    background-size: 100%;
+}
+.yungbogong3 {          /* 融保工(융보공) 로고 (풀 타입) */
+    width: 392px;
+    height: 100px;
+    margin: 0;
+
+    background-image : url('yungbogong-logo.png');
+    background-size: 100%;
+}
+
+.img-discription {
+    margin-top: 10px;
+    font-size: small;
+    color: gray;
+}
