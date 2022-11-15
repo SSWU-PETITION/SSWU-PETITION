@@ -25,10 +25,11 @@ public class HelloController {
         return "halo " + name; //hello-string이라는 홈페이지에 들어갔을 때 띄울 말, html없이 가능
 
     }
-    @GetMapping("member") //트리구조로 웹 호출할건데 member 페이지로 호출할거임
+    @GetMapping("member/join") //트리구조로 웹 호출할건데 member 페이지로 호출할거임
     public String join(Model model) {
-        return "join"; // join.html
+        return "join_terms"; // join_terms.html
     }
+    @GetMapping("member/login") //url
     public String login(Model model) {
         return "login"; // login.html
     }

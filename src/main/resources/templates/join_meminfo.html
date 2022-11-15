@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><!DOCTYPE html>
+        <html lang="ko">
+        <head>
+        <title>STEP3 회원정보입력 | 성신여대청원사이트</title>
+    <style>
+        body {
+         background-color: rgb(243,243,243);
+         width:1200px;
+         margin:0 auto;
+      }
+
+        header {
+            padding:20px 20px 20px 20px;
+         border-radius: 10px;
+            height: 50px;
+         background-color: #1452a3;
+         color:white;
+         margin-bottom: 20px;
+      }
+        #title { display:inline-block; width:500px; font-size:35px; font-weight:bolder; line-height:50px;} 
+      header a {color:white; text-decoration:none;}
+        
+        
+        #nav li { display:inline;  margin-left: 20px;line-height: 40px;position: relative; line-height:20px;}
+        #nav {
+            display:inline-block;
+            width:600px;
+            height: 20px;
+            padding:20px 20px 20px 20px;
+         border-radius: 10px;
+         color:white;
+         margin-bottom: 20px;
+            background-color: #1452a3;
+            text-align: center;
+            font-size:20px; font-weight:bold;
+        }
+
+        section{text-align:center;}
+        #content{font-size: 25px;}
+        .container{width: 100%; margin: 0 auto;background-color: rgb(235, 235, 235);}
+        table{margin : auto; font-size: larger;}
+
+        .i_i3{font-size: 30px; font-weight: bold; text-align: left; padding-left: 100px; }
+
+        input {
+            width:300px; padding: 10px 20px; margin: 5px 0; box-sizing: border-box; border-radius: 5px;
+            border: none; border-bottom:solid 2px #999999;  background-color:rgb(245, 245, 245);
+        }
+        input:focus { border-color: #1452a3 }
+        select{  
+            width:300px; padding: 10px 20px; margin: 5px 0; box-sizing: border-box; border-radius: 5px;
+            border: none; border-bottom:solid 2px #999999; background-color:rgb(245, 245, 245);
+        }
+
+        .b-basic {
+            background-color: #1452a3; border: none; border-radius: 5px; color: white; width: 300px; height:40px; 
+            text-align: center; text-decoration: none; display: inline-block; font-size: 16px;  cursor: pointer;
+        }
+        footer {
+         color:gray;
+         margin-top: 20px;
+         padding: 10px;
+         background-color: rgb(235, 235, 235);
+            border-width: 0.5px;
+         border-style:solid;
+         border-color: #999999 ;
+      }
+        footer p {margin:0}
+    </style>
+</head>
+<body>
+<header>
+    <span id="title"><a href="#">성신여대 청원</a></span>
+    <span id="nav">
+          <li><a href="login.html">로그인</a></li>
+          <li><a href="2_memberAgree.html">회원가입</a></li>
+          <li><a href="#">아이디 찾기</a></li>
+          <li><a href="#">비밀번호 찾기</a></li>
+        </span>
+</header>
+
+<section>
+    <div id="content">
+        <h2>회원가입</h2>
+    </div>
+    <div class="s">
+        <div class="container">
+            <br>
+            <table>
+                <tr calss="step" >
+
+                    <th class="i1" title="STEP 1 - 회원약관동의" >
+                        STEP1<th>회원약관동의</th>
+                    </th>
+                    <th> &nbsp;>>&nbsp; </th>
+                    <th class="i2" title="STEP 2 - 회원인증">
+                        STEP2<th>회원인증</th>
+                    </th>
+                    <th> &nbsp;>>&nbsp; </th>
+                    <th class="i3" title="STEP 3 - 회원정보입력" style="color:#1452a3;">
+                        STEP3<th style="color:#1452a3;">회원정보입력</th>
+                    </th>
+                    <th> &nbsp;>>&nbsp; </th>
+                    <th class="i4" title="STEP 4 - 회원가입완료">
+                        STEP4<th>회원가입완료</th>
+                    </th>
+                </tr>
+            </table>
+            <br>
+            <hr width="1000px" style="color:rgb(207, 207, 207);">
+            <br>
+            <div class="i_i3">회원정보입력</div><br>
+            <article style="text-align: left; padding-left: 100px;" >
+                <input type="text" placeholder="성명"><br>
+                <select>
+                    <option>==========학과==========</option>
+                    <option>융합보안공학과</option>
+                    <option>컴퓨터공학과</option>
+                    <option></option>
+                    <option></option>
+                    <option></option>
+                </select>
+                <br>
+                <input type="text" placeholder="Gmail"> <!--앞에서 인증한 메일주소 띄우기 기능 구현 필요-->
+                <br>
+                <input type="text" placeholder="아이디">
+                <button type="button" value="중복확인" onClick="#" style="height:30px; background-color:#adadad; 
+                        border:none; border-radius:5px;">중복확인</button>
+                <br>
+                <input type="password" placeholder="비밀번호">
+                <span style="font-size:13px; color:#999999">문자열 길이 8~20자로 입력하세요</span>
+                <br>
+                <input type="password" placeholder="비밀번호 확인">
+                <button type="button" value="비밀번호확인" onClick="#" style="height:30px; background-color:#adadad; 
+                        border:none; border-radius:5px;">일치확인</button>
+                <!--자바스크립트로 비밀번호 일치 여부 확인해서 다르면 오류메시지-->
+                <br><br>
+                <button type="submit" onclick="location.href='5_memberJoin.html'" class="b-basic">가입하기</button>
+
+            </article>
+
+            <br><br>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>
+        &copy; 2022 Sungshin Women's University. Webo0 | 02-920-0000
+    </p>
+</footer>
+<!--  <a href="/hello">hello로 가기</a>
+<a href="/hello-mvc">hello-temp로(콘트롤러에서 mvc로 매핑) 가기</a> -->
+
+</body>
+</html></title>
+</head>
+<body>
+
+</body>
+</html>
