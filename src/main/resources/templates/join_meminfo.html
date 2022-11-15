@@ -5,7 +5,7 @@
     <title><!DOCTYPE html>
         <html lang="ko">
         <head>
-        <title>STEP3 회원정보입력 | 성신여대청원사이트</title>
+        <title>STEP2 회원정보입력 | 성신여대청원사이트</title>
     <style>
         body {
          background-color: rgb(243,243,243);
@@ -97,16 +97,12 @@
                         STEP1<th>회원약관동의</th>
                     </th>
                     <th> &nbsp;>>&nbsp; </th>
-                    <th class="i2" title="STEP 2 - 회원인증">
-                        STEP2<th>회원인증</th>
+                    <th class="i3" title="STEP 2 - 회원정보입력" style="color:#1452a3;">
+                        STEP2<th style="color:#1452a3;">회원정보입력</th>
                     </th>
                     <th> &nbsp;>>&nbsp; </th>
-                    <th class="i3" title="STEP 3 - 회원정보입력" style="color:#1452a3;">
-                        STEP3<th style="color:#1452a3;">회원정보입력</th>
-                    </th>
-                    <th> &nbsp;>>&nbsp; </th>
-                    <th class="i4" title="STEP 4 - 회원가입완료">
-                        STEP4<th>회원가입완료</th>
+                    <th class="i4" title="STEP 3 - 회원가입완료">
+                        STEP3<th>회원가입완료</th>
                     </th>
                 </tr>
             </table>
@@ -115,19 +111,11 @@
             <br>
             <div class="i_i3">회원정보입력</div><br>
             <article style="text-align: left; padding-left: 100px;" >
-                <input type="text" placeholder="성명"><br>
-                <select>
-                    <option>==========학과==========</option>
-                    <option>융합보안공학과</option>
-                    <option>컴퓨터공학과</option>
-                    <option></option>
-                    <option></option>
-                    <option></option>
-                </select>
+                <input type="text" placeholder="성명">
                 <br>
-                <input type="text" placeholder="Gmail"> <!--앞에서 인증한 메일주소 띄우기 기능 구현 필요-->
+                <input type="text" placeholder="Gmail">
                 <br>
-                <input type="text" placeholder="아이디">
+                <input type="text" placeholder="닉네임">
                 <button type="button" value="중복확인" onClick="#" style="height:30px; background-color:#adadad; 
                         border:none; border-radius:5px;">중복확인</button>
                 <br>
@@ -139,7 +127,7 @@
                         border:none; border-radius:5px;">일치확인</button>
                 <!--자바스크립트로 비밀번호 일치 여부 확인해서 다르면 오류메시지-->
                 <br><br>
-                <button type="submit" onclick="location.href='5_memberJoin.html'" class="b-basic">가입하기</button>
+                <button type="submit" onclick="location.href='join_complete.html'" class="b-basic">가입하기</button>
 
             </article>
 
