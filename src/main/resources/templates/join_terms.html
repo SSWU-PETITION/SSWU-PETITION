@@ -68,10 +68,10 @@
 </head>
 <body>
 <header>
-    <span id="title"><a href="#">성신여대 청원</a></span>
+    <span id="title"><a href="/">성신여대 청원</a></span>
     <span id="nav">
-          <li><a href="login.html">로그인</a></li>
-          <li><a href="2_memberAgree.html">회원가입</a></li>
+          <li><a href="/member/login">로그인</a></li>
+          <li><a href="/member/join">회원가입</a></li>
           <li><a href="#">아이디 찾기</a></li>
           <li><a href="#">비밀번호 찾기</a></li>
         </span>
@@ -90,14 +90,17 @@
                     STEP1<th style="color:#1452a3;">회원약관동의</th>
                 </th>
                 <th> &nbsp;>>&nbsp; </th>
-                <th class="i3" title="STEP 2 - 회원정보입력">
-                    STEP2<th>회원정보입력</th>
+                <th class="i2" title="STEP 2 - 회원인증">
+                    STEP2<th>회원인증</th>
                 </th>
                 <th> &nbsp;>>&nbsp; </th>
-                <th class="i4" title="STEP 3 - 회원가입완료">
-                    STEP3<th>회원가입완료</th>
+                <th class="i3" title="STEP 3 - 회원정보입력">
+                    STEP3<th>회원정보입력</th>
                 </th>
-
+                <th> &nbsp;>>&nbsp; </th>
+                <th class="i4" title="STEP 4 - 회원가입완료">
+                    STEP4<th>회원가입완료</th>
+                </th>
             </tr>
         </table>
         <br>
@@ -128,7 +131,7 @@
         <br><br>
         <label for="chk_agree"><input type="checkbox" id="chk_agree"> 모든 약관에 동의합니다.</label>
         <br><br>
-        <button type="submit"  onClick="location.href='join_meminfo.html'" class="b-basic-1" >동의합니다</button>
+        <button type="submit"  onClick="location.href='/member/join_meminfo'" class="b-basic-1" >동의합니다</button>
         <button type="submit" onclick="javascript: ;" class="b-basic-2">동의하지않습니다</button>
         <br><br><br>
 

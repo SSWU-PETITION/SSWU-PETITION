@@ -29,6 +29,14 @@ public class HelloController {
     public String join(Model model) {
         return "join_terms"; // join_terms.html
     }
+    @GetMapping("member/join_meminfo")
+    public String join2(Model model) {
+        return "join_meminfo"; // join_terms.html
+    }
+    @GetMapping("member/join_complete")
+    public String join3(Model model) {
+        return "join_complete"; // join_terms.html
+    }
     @GetMapping("member/login") //url
     public String login(Model model) {
         return "login"; // login.html
