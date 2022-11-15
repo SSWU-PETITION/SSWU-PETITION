@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Document</title>
+</head>
+<body>
+<h1>회원가입</h1>
+<form>
+    <fieldset>
+        <legend>입력 양식</legend>
+        <hr><br>
+        <!--실습-->
+        <table>
+            <tr>
+                <td width="100px">아이디</td>
+                <td><input type="text" name="inputID"> <input type="button" value = "중복확인"></td>
+            </tr>
+            <tr>
+                <td>비밀번호</td>
+                <td><input type="password" name="inputPass"></td>
+            </tr>
+            <tr>
+                <td>이름</td>
+                <td><input type="text" name="username"></td>
+            </tr>
+            <tr>
+                <td>성별</td>
+                <td><input type="radio" name="sex" value="w">여
+                    <input type="radio" name="sex" value="m">남</td>
+            </tr>
+            <tr>
+                <td>주소</td>
+                <td>
+                    <input type="text" size="5px"> - <input type="text" size="5px">
+                    <input type="button" value="우편번호">
+                    <br>
+                    <input type="text">
+                </td>
+            </tr>
+            <tr>
+                <td>휴대전화</td>
+                <td><select><option>010</option><option>011</option><option>017</option><option>018</option><option>019</option></select> -
+                    <input type="text" size="4px" name="middle"> -
+                    <input type="text" size="4px" name="back">
+                </td>
+            </tr>
+            <tr>
+                <td>이메일</td>
+                <td><input type="text" size="8px">
+                    <select>
+                        <option>@naver.com</option>
+                        <option>@daum.net</option>
+                        <option>@sungshin.ac.kr</option>
+                    </select></td>
+            </tr>
+            <tr>
+                <td>직업</td>
+                <td><select>
+                    <option>대학생</option>
+                    <option>회사원</option>
+                    <option>자영업</option>
+                </select>
+
+                </td>
+            </tr>
+            <tr>
+                <td>취미</td>
+                <td>
+                    <input type="checkbox" name="hobby" value="book" >독서
+                    <input type="checkbox" name="hobby" value="movie">영화
+                    <input type="checkbox" name="hobby" value="music">음악
+                    <input type="checkbox" name="hobby" value="sports">스포츠
+                </td>
+            </tr>
+            <tr>
+                <td>자기소개</td>
+                <td><textarea name="show" rows="10" cols="40"></textarea></td>
+            </tr>
+            <hr>
+        </table>
+        <hr>
+        <input type="checkbox" name="email"> 사이트의 이메일을 수신합니다.<br>
+        <input type="checkbox" name="SMS"> 사이트의 SMS를 수신합니다.<br><br>
+        <input type="submit" value="회원가입">
+        <input type="reset" value="초기화">
+    </fieldset>
+</form>
+</body>
+</html>

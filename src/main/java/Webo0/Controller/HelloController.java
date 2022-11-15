@@ -1,4 +1,4 @@
-package Webo0;
+package Webo0.Controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
