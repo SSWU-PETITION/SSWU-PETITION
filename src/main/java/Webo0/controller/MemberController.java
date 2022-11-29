@@ -2,8 +2,8 @@ package Webo0.controller;
 
 import Webo0.domain.Member;
 import Webo0.dto.*;
-import Webo0.repository.H2MemberRepository;
-import Webo0.service.MemberServiceImpl;
+import Webo0.repository.MemberRepository;
+import Webo0.service.MemberService;
 import io.swagger.annotations.ApiOperation;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
@@ -15,8 +15,8 @@ import java.util.List;
 @RestController
 @RequestMapping("/members")
 public class MemberController {
-    private final H2MemberRepository memberRepository;
-    private final MemberServiceImpl memberService;
+    private final MemberRepository memberRepository;
+    private final MemberService memberService;
 
     @PostMapping("/new")
     @ApiOperation(value = "회원가입", notes = "회원가입 API")
