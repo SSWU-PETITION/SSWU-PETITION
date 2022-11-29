@@ -45,7 +45,7 @@ public class H2MemberRepository implements MemberRepository {
     public void insertOne(Member newMember) {
         String insertOneQuery = "insert into member (member_name, nickname, email, password) values (?,?,?,?);";
 
-        this.jdbcTemplate.update(insertOneQuery, new Object[] {newMember.getName(), newMember.getNickname(),
+        this.jdbcTemplate.update(insertOneQuery, new Object[] {newMember.getMember_name(), newMember.getNickname(),
                 newMember.getEmail(), newMember.getPassword()});
     }
 

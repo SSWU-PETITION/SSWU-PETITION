@@ -1,7 +1,7 @@
 package Webo0.service;
 
 import Webo0.domain.Member;
-import Webo0.repository.MemberRepository;
+import Webo0.repository.H2MemberRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -11,7 +11,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class MemberServiceImpl implements MemberService{
 
-    private final MemberRepository memberRepository;
+    private final H2MemberRepository memberRepository;
 
     @Override
     public Member findOne(Long memberId) {

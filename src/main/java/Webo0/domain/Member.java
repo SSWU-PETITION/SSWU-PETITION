@@ -7,9 +7,9 @@ import java.time.LocalDateTime;
 @Getter
 public class Member {
     // member_id
-    private Long id;
+    private Long member_id;
     // member_name
-    private String name;
+    private String member_name;
     private String nickname;
 
     private String email;
@@ -21,13 +21,13 @@ public class Member {
     private LocalDateTime updatedAt;
 
     private Member(String name, String nickname, String email) {
-        this.name = name;
+        this.member_name = name;
         this.nickname = nickname;
         this.email = email;
     }
 
     private Member(String name, String nickname, String email, String password) {
-        this.name = name;
+        this.member_name = name;
         this.nickname = nickname;
         this.email = email;
         this.password = password;
@@ -40,4 +40,5 @@ public class Member {
     public static Member loadMember(String name, String nickname, String email) {
         return new Member(name, nickname, email);
     }
+
 }
