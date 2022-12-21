@@ -33,7 +33,7 @@ public class MemberController {
         return new PostMemberResDto(newMember.getMember_name(), newMember.getEmail());
     }
 
-    @GetMapping("/{memberId}")
+    @GetMapping("/find/{memberId}")
     @ApiOperation(value = "회원 조회", notes = "회원 id로 회원 조회 API")
     public GetMemberResDto getMember(@PathVariable("memberId") Long memberId) {
         Member findMember = memberService.findOne(memberId);
@@ -55,7 +55,7 @@ public class MemberController {
         return getMemberResDtos;
     }
 
-    @PatchMapping("/{memberId}/nickname")
+    @PatchMapping("/find/{memberId}/nickname")
     @ApiOperation(value = "회원 닉네임 수정", notes = "회원 닉네임 수정 API")
     public PatchMemberNicknameResDto patchNickname(@PathVariable("memberId") Long memberId,
                                                    @RequestBody PatchMemberNicknameReqDto pathMemberNicknameReqDto) {
