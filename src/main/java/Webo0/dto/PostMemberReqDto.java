@@ -1,13 +1,14 @@
 package Webo0.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 @Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@Data
 public class PostMemberReqDto {
+
     String name;
     String nickname;
     String email;
