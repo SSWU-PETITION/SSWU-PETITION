@@ -8,6 +8,8 @@ public interface MemberService {
 
     Member findOne(Long memberId);
 
+    Long isValid(String email,String password);
+
     List<Member> findAll();
 
     Long modifyNickname(Long memberId, String newNickname);

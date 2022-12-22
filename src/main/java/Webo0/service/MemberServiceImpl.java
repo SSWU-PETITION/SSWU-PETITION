@@ -3,6 +3,7 @@ package Webo0.service;
 import Webo0.domain.Member;
 import Webo0.repository.MemberRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.dao.IncorrectResultSizeDataAccessException;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -16,6 +17,11 @@ public class MemberServiceImpl implements MemberService{
     @Override
     public Member findOne(Long memberId) {
         return memberRepository.selectOne(memberId);
+    }
+
+    @Override
+    public Long isValid(String email,String password) throws IncorrectResultSizeDataAccessException{
+        return memberRepository.selectMemberId(email, password);
     }
 
     @Override

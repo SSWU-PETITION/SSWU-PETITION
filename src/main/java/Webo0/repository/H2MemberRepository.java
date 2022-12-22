@@ -19,7 +19,7 @@ public class H2MemberRepository implements MemberRepository {
     }
 
     @Override
-    public Member selectOne(Long memberId) {
+    public Member selectOne(Long memberId) { //회원 관리용 쿼리
         String selectOneQuery = "select * from member where member_id = ?";
 
         return this.jdbcTemplate.queryForObject(selectOneQuery,
@@ -55,5 +55,11 @@ public class H2MemberRepository implements MemberRepository {
         this.jdbcTemplate.update(updateNicknameQuery, new Object[]{newNickname, memberId});
 
         return memberId;
+    }
+
+    @Override
+    public Long selectMemberId(String email, String password) {
+        String selectValidAccountQuery = "select member_id from member where email = ? and password = ?";
+        return this.jdbcTemplate.queryForObject(selectValidAccountQuery, new Object[]{email, password}, Long.class);
     }
 }

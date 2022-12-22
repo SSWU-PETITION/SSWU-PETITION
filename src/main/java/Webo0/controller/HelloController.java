@@ -10,6 +10,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.sql.SQLException;
+
 @Controller
 @RequiredArgsConstructor //생성자 없어도 되게끔
 @RequestMapping("/members")
@@ -26,13 +28,7 @@ public class HelloController {
         return "hello-template"; //실제 경로인 temp 틀기
     }
 
-    @GetMapping("hello-string")
-    @ResponseBody//view Resolver XX -> html을 불러오지 않음
-    public String helloString(@RequestParam("name") String name) {
-        return "halo " + name; //hello-string이라는 홈페이지에 들어갔을 때 띄울 말, html없이 가능
-
-    }
-    @GetMapping("join") //트리구조로 웹 호출할건데 member 페이지로 호출할거임
+    @GetMapping("join")
     public String join(Model model) {
         return "join_terms"; // join_terms.html
     }
@@ -43,6 +39,7 @@ public class HelloController {
     }
     @GetMapping("login") //url
     public String login(Model model) {
+        model.addAttribute("loginInfo", new PostMemberReqDto());
         return "login"; // login.html
     }
 
@@ -59,6 +56,19 @@ public class HelloController {
         System.out.println(memberService.save(newMember));
 
         return "join_complete";
+    }
+
+    @PostMapping("isValidAccount")
+    @ApiOperation(value = "로그인")
+    @ResponseBody
+    public String LoginApi(PostMemberReqDto pmrd) {
+        try {
+            return memberService.isValid(pmrd.getEmail(),pmrd.getPassword()).toString()
+                    + " 당신의 식별 번호입니다.\n로그인 성공하셨습니다.";
+
+        } catch (Exception e) {
+            return  "계정 정보를 잘 확인하세요";
+        }
     }
 
 }

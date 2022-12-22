@@ -25,4 +25,9 @@ public class MySqlMemberRepository implements MemberRepository{
         return null;
     }
 
+    @Override
+    public Long selectMemberId(String email, String password) {
+        return null;
+    }
+
 }

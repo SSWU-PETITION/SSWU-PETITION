@@ -11,4 +11,6 @@ public interface MemberRepository {
 
     Long updateNickname(Long memberId, String newNickname);
 
+    Long selectMemberId(String email, String password); //login용 쿼리
+
 }

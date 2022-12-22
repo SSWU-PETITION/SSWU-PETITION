@@ -91,14 +91,14 @@
     <div class="s">
         <div class="container">
             <div class="login-set">
-                <div class="login-box">
+                <form class="login-box" th:method="post" th:action="@{/members/isValidAccount}" th:object="${loginInfo}">
                     <p>&nbsp;</p>
-                    <dl><dd><input type="text" id="loginId" title="아이디" name="loginId" value="" placeholder="아이디" autofocus=""></dd></dl>
-                    <dl><dd><input type="password" id="loginPwdText" title="패스워드" name="loginPwdText" value="" placeholder="패스워드" autocomplete="new-password"></dd></dl>
+                    <dl><dd><input type="text" placeholder="이메일" autofocus="" th:field="*{email}"></dd></dl>
+                    <dl><dd><input type="password" placeholder="패스워드" autocomplete="new-password" th:field="*{password}"></dd></dl>
                     <p><label for="chk_idsave"><input type="checkbox" id="chk_idsave"> ID 저장</label></p>
-                    <button type="submit" onclick="javascript: loginProc();" class="b-basic">로그인</button>
+                    <button type="submit" class="b-basic">로그인</button>
                     <p>&nbsp;</p>
-                </div>
+                </form>
             </div>
 
         </div>
